@@ -142,7 +142,7 @@ function HomeView({ onSelectTeam }) {
   return (
     <div className="app">
       <header className="header home-header">
-        <h1>🏎️ Race Sponsors</h1>
+        <h1>Race Sponsors</h1>
         <p className="subtitle">F1 2026 Season</p>
         <p className="subtitle-small">11 Teams • 22 Drivers</p>
       </header>
