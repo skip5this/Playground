@@ -6,7 +6,7 @@ import { teams, getTeamById } from './data/teams'
 function useSwipeBack(onSwipeRight) {
   const touchStart = useRef(null)
   const touchEnd = useRef(null)
-  const minSwipeDistance = 50
+  const minSwipeDistance = 100
 
   const onTouchStart = (e) => {
     touchEnd.current = null
