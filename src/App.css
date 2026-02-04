@@ -8,38 +8,144 @@
 /* Header */
 .header {
   padding: 1rem;
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
   background: linear-gradient(135deg, #dc0000 0%, #8b0000 100%);
   color: white;
   text-align: center;
+  position: relative;
+}
+
+.home-header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  border-bottom: 1px solid #444;
 }
 
 .header h1 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
 }
 
 .header .subtitle {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   opacity: 0.9;
 }
 
-.header .driver-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
-  opacity: 0.8;
+.header .subtitle-small {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.25rem;
 }
 
-.header .number {
-  background: white;
-  color: #dc0000;
-  padding: 0.125rem 0.5rem;
-  border-radius: 4px;
+.back-button {
+  position: absolute;
+  left: 1rem;
+  top: calc(1rem + env(safe-area-inset-top, 0px));
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.back-button:active {
+  background: rgba(255,255,255,0.3);
+}
+
+.driver-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.driver-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  background: rgba(255,255,255,0.15);
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+}
+
+.driver-chip .number {
   font-weight: 700;
+}
+
+/* Teams List */
+.teams-section {
+  flex: 1;
+  padding: 1rem;
+}
+
+.teams-section h2 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.teams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  background: #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.team-card:hover,
+.team-card:active {
+  background: #333;
+  transform: scale(1.01);
+}
+
+.team-color-bar {
+  width: 4px;
+  align-self: stretch;
+}
+
+.team-card-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.team-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.team-drivers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.driver-tag {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.team-arrow {
+  padding: 1rem;
+  color: #666;
+  font-size: 1.25rem;
 }
 
 /* Car Image Section */
@@ -53,9 +159,7 @@
   overflow: hidden;
   background: #333;
   aspect-ratio: 16/9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
 .car-image {
@@ -65,10 +169,28 @@
 }
 
 .car-placeholder {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: #666;
   font-size: 0.875rem;
-  text-align: center;
-  padding: 2rem;
+  gap: 0.5rem;
+}
+
+.car-placeholder span:first-child {
+  font-size: 2rem;
+}
+
+.car-specs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: #888;
 }
 
 /* Sponsor List */
@@ -78,10 +200,10 @@
 }
 
 .sponsors-section h2 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #999;
+  color: #888;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -107,7 +229,7 @@
 .sponsor-item:hover,
 .sponsor-item:active {
   background: #333;
-  border-color: #dc0000;
+  border-color: rgba(255,255,255,0.1);
   transform: scale(1.01);
 }
 
@@ -123,9 +245,9 @@
   color: white;
 }
 
-.sponsor-location {
-  font-size: 0.75rem;
-  color: #888;
+.sponsor-category {
+  font-size: 0.7rem;
+  color: #666;
 }
 
 .sponsor-arrow {
@@ -135,12 +257,12 @@
 
 .sponsor-item:hover .sponsor-arrow,
 .sponsor-item:active .sponsor-arrow {
-  color: #dc0000;
+  color: #888;
 }
 
 /* Category Headers */
 .category-header {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: #dc0000;
   text-transform: uppercase;
@@ -157,19 +279,16 @@
 /* Footer */
 .footer {
   padding: 1rem;
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
   text-align: center;
   font-size: 0.75rem;
   color: #666;
   border-top: 1px solid #333;
 }
 
-/* Safe area for notched phones */
+/* Safe area handling */
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
   .app {
     padding-bottom: env(safe-area-inset-bottom);
-  }
-  
-  .header {
-    padding-top: calc(1rem + env(safe-area-inset-top));
   }
 }
