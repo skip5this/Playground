@@ -7,8 +7,8 @@
 
 /* Header */
 .header {
-  padding: 1rem;
-  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+  padding: 1.5rem;
+  padding-top: calc(2rem + env(safe-area-inset-top, 0px));
   background: linear-gradient(135deg, #dc0000 0%, #8b0000 100%);
   color: white;
   text-align: center;
@@ -19,23 +19,26 @@
   background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
   border-bottom: 1px solid #444;
   text-align: left;
+  padding: 2rem 1.5rem;
+  padding-top: calc(2.5rem + env(safe-area-inset-top, 0px));
 }
 
 .header h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .header .subtitle {
-  font-size: 0.9rem;
+  font-size: 1rem;
   opacity: 0.9;
+  margin-top: 0.5rem;
 }
 
 .header .subtitle-small {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   opacity: 0.7;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 .back-button {
@@ -80,7 +83,7 @@
 /* Teams List */
 .teams-section {
   flex: 1;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .teams-section h2 {
