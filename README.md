@@ -1,5 +1,7 @@
 # 🏔️ Cabin Playground
 
+**Live:** https://playground-psi-rosy.vercel.app
+
 A sandbox for vibe coding from the cabin with Scott & Dad.
 
 ## How It Works
