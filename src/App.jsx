@@ -1,6 +1,33 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import './App.css'
 import { teams, getTeamById } from './data/teams'
+
+// Swipe detection hook
+function useSwipeBack(onSwipeRight) {
+  const touchStart = useRef(null)
+  const touchEnd = useRef(null)
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e) => {
+    touchEnd.current = null
+    touchStart.current = e.targetTouches[0].clientX
+  }
+
+  const onTouchMove = (e) => {
+    touchEnd.current = e.targetTouches[0].clientX
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart.current || !touchEnd.current) return
+    const distance = touchEnd.current - touchStart.current
+    const isRightSwipe = distance > minSwipeDistance
+    if (isRightSwipe) {
+      onSwipeRight()
+    }
+  }
+
+  return { onTouchStart, onTouchMove, onTouchEnd }
+}
 
 function SponsorItem({ sponsor }) {
   const handleClick = () => {
@@ -42,6 +69,8 @@ function TeamCard({ team, onClick }) {
 }
 
 function TeamView({ team, onBack }) {
+  const swipeHandlers = useSwipeBack(onBack)
+  
   // Group sponsors by category
   const categories = team.sponsors.reduce((acc, sponsor) => {
     const cat = sponsor.category
@@ -51,7 +80,7 @@ function TeamView({ team, onBack }) {
   }, {})
 
   return (
-    <div className="app">
+    <div className="app" {...swipeHandlers}>
       <header className="header" style={{ background: `linear-gradient(135deg, ${team.color} 0%, ${team.color}99 100%)` }}>
         <button className="back-button" onClick={onBack}>← Back</button>
         <h1>{team.shortName}</h1>
