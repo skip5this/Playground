@@ -24,7 +24,7 @@ main {
 
 .card {
   padding: 2rem;
-  background: #1a1a1a;
+  background: #f5f5f5;
   border-radius: 12px;
 }
 
@@ -52,7 +52,7 @@ button:focus-visible {
 }
 
 code {
-  background: #333;
+  background: #e0e0e0;
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-size: 0.9em;
@@ -60,7 +60,7 @@ code {
 
 .projects {
   padding: 2rem;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: #f0f0f0;
   border-radius: 12px;
 }
 
