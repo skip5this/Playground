@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcast Show Notes — AI-Generated Episode Notes</title>
+  <meta name="description" content="Transform your podcast episodes into polished show notes. Timestamps, summaries, key quotes, and SEO-ready descriptions. Save hours per episode.">
+  <link rel="stylesheet" href="../styles/shared.css">
+  <style>
+    .output-example {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .output-example h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .output-example .episode-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .timestamps {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+    .timestamps .time {
+      color: var(--accent);
+      margin-right: 0.5rem;
+    }
+    .quotes {
+      border-left: 2px solid var(--accent);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+      color: var(--text);
+    }
+    .seo-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .seo-box .label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+    .time-saved {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .time-saved .stat {
+      display: flex;
+      flex-direction: column;
+    }
+    .time-saved .number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .time-saved .label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">Skills Store</a>
+      <a href="#get-started" class="btn btn-secondary">Get the Skill</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="badge">🎙️ Claude Code Skill</span>
+      <h1>Podcast Show Notes</h1>
+      <p class="subtitle">Turn your episodes into polished show notes with timestamps, summaries, and SEO descriptions. Stop dreading post-production.</p>
+      
+      <div style="margin-top: 2rem;">
+        <span class="price-tag">
+          <span class="price-currency">$</span>
+          <span class="price-amount">12</span>
+        </span>
+        <span class="price-note">One-time purchase • Lifetime access</span>
+      </div>
+      
+      <div style="margin-top: 1.5rem;">
+        <a href="#get-started" class="btn btn-primary btn-large">Join Waitlist →</a>
+      </div>
+      
+      <div class="time-saved">
+        <div class="stat">
+          <span class="number">2-3</span>
+          <span class="label">hours saved per episode</span>
+        </div>
+        <div class="stat">
+          <span class="number">30</span>
+          <span class="label">seconds to generate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>What You Get</h2>
+      
+      <div class="output-example">
+        <h4>Generated Output</h4>
+        <p class="episode-title">Ep. 47: The Future of Remote Work with Sarah Chen</p>
+        
+        <p style="color: var(--text); margin-bottom: 1rem;">Sarah Chen, founder of Distributed Labs, shares her framework for building async-first remote teams. We cover communication patterns, time zone strategies, and why "hybrid" often fails.</p>
+        
+        <div class="timestamps">
+          <p><span class="time">00:00</span> Intro and Sarah's background</p>
+          <p><span class="time">03:24</span> Why she quit Google to go remote-first</p>
+          <p><span class="time">12:15</span> The async communication framework</p>
+          <p><span class="time">28:42</span> Dealing with time zone challenges</p>
+          <p><span class="time">41:08</span> Why most hybrid models don't work</p>
+          <p><span class="time">52:30</span> Tools and resources</p>
+        </div>
+        
+        <div class="quotes">
+          "Async isn't about eliminating meetings — it's about making meetings optional."
+        </div>
+        
+        <div class="seo-box">
+          <p class="label">SEO Description (160 chars)</p>
+          <p style="font-size: 0.9rem; color: var(--text);">Sarah Chen shares her framework for async-first remote teams, covering communication patterns, time zones, and why hybrid often fails. Practical advice inside.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="demo">
+        <div class="demo-header">
+          <div class="demo-dots">
+            <span class="demo-dot red"></span>
+            <span class="demo-dot yellow"></span>
+            <span class="demo-dot green"></span>
+          </div>
+          <span class="demo-title">Terminal</span>
+        </div>
+        <div class="demo-content">
+          <pre style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">
+<span style="color: #6b7280;"># Generate show notes from transcript</span>
+<span style="color: #22c55e;">$</span> claude "create show notes for episode-47.txt"
+
+<span style="color: var(--text);">✓ Reading transcript (47 min)...</span>
+<span style="color: var(--text);">✓ Generating timestamps...</span>
+<span style="color: var(--text);">✓ Extracting key quotes...</span>
+<span style="color: var(--text);">✓ Writing SEO description...</span>
+
+<span style="color: #3b82f6;">📝 show-notes-ep47.md created!</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">⏱️</div>
+          <h3>Accurate Timestamps</h3>
+          <p>Identifies topic transitions and creates clickable chapter markers for your listeners.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💬</div>
+          <h3>Pull Quotes</h3>
+          <p>Extracts the most shareable, tweetable moments from your episode automatically.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔍</div>
+          <h3>SEO Optimized</h3>
+          <p>Generates descriptions, titles, and keywords tuned for podcast directories and search.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔗</div>
+          <h3>Links & Resources</h3>
+          <p>Extracts mentioned books, tools, and URLs. Creates a clean resources section.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Input Formats</h2>
+      <div class="tags" style="justify-content: center;">
+        <span class="tag">Transcript (.txt, .md)</span>
+        <span class="tag">SRT subtitles</span>
+        <span class="tag">Descript export</span>
+        <span class="tag">Otter.ai export</span>
+        <span class="tag">Whisper output</span>
+        <span class="tag">YouTube transcript</span>
+      </div>
+      <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">Works with any transcript format. Just point it at the file.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="faq-item">
+        <h3>Do I need a transcript?</h3>
+        <p>Yes, the skill works with transcripts. Use Whisper, Descript, Otter, or your podcast host's transcription feature.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How accurate are the timestamps?</h3>
+        <p>They're based on the transcript timing. If your transcript has timecodes (like SRT), they'll be precise.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I customize the output format?</h3>
+        <p>Yes. Use your own template or describe what you want. "More timestamps" or "shorter summary" — it adapts.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will it work for video podcasts?</h3>
+        <p>Absolutely. Same transcript, same process. Great for YouTube descriptions too.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta" id="get-started">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Get Early Access</h2>
+        <p>Join the waitlist for Podcast Show Notes. Perfect for podcasters, YouTubers, and content creators.</p>
+        
+        <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="email" name="email" placeholder="you@example.com" required>
+          <button type="submit" class="btn btn-primary">Join Waitlist</button>
+        </form>
+        
+        <p style="font-size: 0.85rem; margin-top: 1rem;">No spam. Just a one-time launch notification.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by <a href="https://scottkbell.com">Scott Bell</a> • <a href="/">More Skills</a></p>
+    </div>
+  </footer>
+</body>
+</html>

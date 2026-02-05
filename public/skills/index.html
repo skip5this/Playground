@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Skills Store — Powerful Tools for AI Assistants</title>
+  <meta name="description" content="Premium skills for Claude Code and AI agents. One-time purchase, instant productivity boost. Changelog generation, color systems, show notes, and more.">
+  <link rel="stylesheet" href="styles/shared.css">
+  <style>
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .skill-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .skill-card .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .skill-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .skill-card p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .skill-card .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .skill-card .price {
+      font-weight: 600;
+      color: var(--text);
+    }
+    .skill-card .category {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hero-home {
+      padding: 6rem 0 4rem;
+      text-align: center;
+    }
+    .hero-home h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-home .subtitle {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .category-btn {
+      padding: 0.5rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .category-btn:hover, .category-btn.active {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+    .coming-soon {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .coming-soon-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--warning);
+      color: var(--bg);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .skill-card {
+      position: relative;
+    }
+    .value-props {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 4rem 0;
+      text-align: center;
+    }
+    .value-prop h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .value-prop p {
+      font-size: 0.9rem;
+    }
+    @media (max-width: 640px) {
+      .hero-home h1 {
+        font-size: 2.25rem;
+      }
+      .value-props {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">🛠️ Skills Store</a>
+    </div>
+  </header>
+
+  <section class="hero-home">
+    <div class="container">
+      <h1>Agent Skills That<br>Actually Work</h1>
+      <p class="subtitle">Premium tools for Claude Code and AI agents. One-time purchase. Zero subscriptions. Instant productivity boost.</p>
+      
+      <div class="value-props">
+        <div class="value-prop">
+          <h3>💰 One-Time Purchase</h3>
+          <p>Pay once, own forever. No subscriptions, no API costs, no tracking.</p>
+        </div>
+        <div class="value-prop">
+          <h3>⚡ Instant Setup</h3>
+          <p>Drop into your skills folder and go. Works with Claude Code and MCP clients.</p>
+        </div>
+        <div class="value-prop">
+          <h3>🔧 Actually Useful</h3>
+          <p>Built to solve real problems. Not demos — tools you'll use every day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 0.5rem;">Available Skills</h2>
+      <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Join the waitlist for early access and launch pricing</p>
+      
+      <div class="skills-grid">
+        <!-- Changelog Composer -->
+        <a href="/changelog-composer/" class="skill-card">
+          <div class="icon">📝</div>
+          <h3>Changelog Composer</h3>
+          <p>Turn messy git commits into polished, categorized release notes. One command.</p>
+          <div class="meta">
+            <span class="price">$9</span>
+            <span class="category">Developer</span>
+          </div>
+        </a>
+        
+        <!-- Color Palette Generator -->
+        <a href="/color-palette/" class="skill-card">
+          <div class="icon">🎨</div>
+          <h3>Color Palette Generator</h3>
+          <p>One brand color → complete accessible color system with dark mode.</p>
+          <div class="meta">
+            <span class="price">$7</span>
+            <span class="category">Design</span>
+          </div>
+        </a>
+        
+        <!-- Podcast Show Notes -->
+        <a href="/podcast-notes/" class="skill-card">
+          <div class="icon">🎙️</div>
+          <h3>Podcast Show Notes</h3>
+          <p>Transform transcripts into timestamps, summaries, quotes, and SEO descriptions.</p>
+          <div class="meta">
+            <span class="price">$12</span>
+            <span class="category">Content</span>
+          </div>
+        </a>
+        
+        <!-- Coming Soon Skills -->
+        <div class="skill-card coming-soon">
+          <span class="coming-soon-badge">Soon</span>
+          <div class="icon">♿</div>
+          <h3>A11y Copilot</h3>
+          <p>Real-time accessibility auditing with one-click fixes. WCAG compliant.</p>
+          <div class="meta">
+            <span class="price">$15</span>
+            <span class="category">Design</span>
+          </div>
+        </div>
+        
+        <div class="skill-card coming-soon">
+          <span class="coming-soon-badge">Soon</span>
+          <div class="icon">📖</div>
+          <h3>README Bootstrapper</h3>
+          <p>Scan your codebase, generate comprehensive docs with setup and examples.</p>
+          <div class="meta">
+            <span class="price">$9</span>
+            <span class="category">Developer</span>
+          </div>
+        </div>
+        
+        <div class="skill-card coming-soon">
+          <span class="coming-soon-badge">Soon</span>
+          <div class="icon">₿</div>
+          <h3>Bitcoin Tax Calculator</h3>
+          <p>Parse wallet exports, calculate cost basis, generate tax reports.</p>
+          <div class="meta">
+            <span class="price">$25</span>
+            <span class="category">Bitcoin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align: center;">How Skills Work</h2>
+      <div class="steps" style="max-width: 500px; margin: 2rem auto 0;">
+        <div class="step">
+          <div class="step-content">
+            <h3>Purchase & Download</h3>
+            <p>One-time payment, instant access. You get a folder with the skill files.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-content">
+            <h3>Drop Into Skills Folder</h3>
+            <p>Add to your Claude Code skills directory. Takes 30 seconds.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-content">
+            <h3>Use Natural Language</h3>
+            <p>"Generate changelog" or "create color palette" — the skill handles the rest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Get Notified</h2>
+        <p>Be the first to know when new skills launch. Early access + launch pricing.</p>
+        
+        <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="email" name="email" placeholder="you@example.com" required>
+          <input type="hidden" name="source" value="homepage">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        
+        <p style="font-size: 0.85rem; margin-top: 1rem;">No spam. Just launch announcements.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by <a href="https://scottkbell.com">Scott Bell</a> — Designer × AI enthusiast</p>
+    </div>
+  </footer>
+</body>
+</html>

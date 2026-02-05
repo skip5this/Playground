@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette Generator — Accessible Color Systems</title>
+  <meta name="description" content="Generate accessible color palettes from a single brand color. Dark mode, contrast ratios, CSS variables — all generated instantly.">
+  <link rel="stylesheet" href="../styles/shared.css">
+  <style>
+    .palette-demo {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .palette-swatch {
+      aspect-ratio: 1;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: flex-end;
+      padding: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+    }
+    .palette-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .contrast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.15rem 0.5rem;
+      background: rgba(34, 197, 94, 0.2);
+      color: #22c55e;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+    .output-preview {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      overflow-x: auto;
+    }
+    .output-preview .prop {
+      color: #a78bfa;
+    }
+    .output-preview .value {
+      color: #fbbf24;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">Skills Store</a>
+      <a href="#get-started" class="btn btn-secondary">Get the Skill</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="badge">🎨 Claude Code Skill</span>
+      <h1>Color Palette Generator</h1>
+      <p class="subtitle">One brand color in, complete accessible color system out. Dark mode included.</p>
+      
+      <div style="margin-top: 2rem;">
+        <span class="price-tag">
+          <span class="price-currency">$</span>
+          <span class="price-amount">7</span>
+        </span>
+        <span class="price-note">One-time purchase • Lifetime access</span>
+      </div>
+      
+      <div style="margin-top: 1.5rem;">
+        <a href="#get-started" class="btn btn-primary btn-large">Join Waitlist →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="palette-demo">
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+          <strong style="color: var(--text);">Input:</strong> "#3b82f6" (your brand blue)
+        </p>
+        
+        <div class="palette-grid">
+          <div>
+            <div class="palette-swatch" style="background: #eff6ff;"></div>
+            <p class="palette-label">50</p>
+          </div>
+          <div>
+            <div class="palette-swatch" style="background: #dbeafe;"></div>
+            <p class="palette-label">100</p>
+          </div>
+          <div>
+            <div class="palette-swatch" style="background: #bfdbfe;"></div>
+            <p class="palette-label">200</p>
+          </div>
+          <div>
+            <div class="palette-swatch" style="background: #93c5fd;"></div>
+            <p class="palette-label">300</p>
+          </div>
+          <div>
+            <div class="palette-swatch" style="background: #60a5fa;"></div>
+            <p class="palette-label">400</p>
+          </div>
+          <div>
+            <div class="palette-swatch" style="background: #3b82f6;"></div>
+            <p class="palette-label">500 ★</p>
+          </div>
+          <div>
+            <div class="palette-swatch" style="background: #2563eb;"></div>
+            <p class="palette-label">600</p>
+          </div>
+          <div>
+            <div class="palette-swatch" style="background: #1d4ed8;"></div>
+            <p class="palette-label">700</p>
+          </div>
+          <div>
+            <div class="palette-swatch" style="background: #1e40af; color: white;"></div>
+            <p class="palette-label">800</p>
+          </div>
+          <div>
+            <div class="palette-swatch" style="background: #1e3a8a; color: white;"></div>
+            <p class="palette-label">900</p>
+          </div>
+        </div>
+        
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="contrast-badge">✓ AA Large (600+)</span>
+          <span class="contrast-badge">✓ AAA (700+)</span>
+          <span class="contrast-badge">✓ Dark mode ready</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Output Ready to Use</h2>
+      <div class="output-preview">
+        <pre>
+<span class="prop">:root</span> {
+  <span class="prop">--blue-50</span>: <span class="value">#eff6ff</span>;
+  <span class="prop">--blue-100</span>: <span class="value">#dbeafe</span>;
+  <span class="prop">--blue-200</span>: <span class="value">#bfdbfe</span>;
+  <span class="prop">--blue-300</span>: <span class="value">#93c5fd</span>;
+  <span class="prop">--blue-400</span>: <span class="value">#60a5fa</span>;
+  <span class="prop">--blue-500</span>: <span class="value">#3b82f6</span>;  <span style="color: #6b7280;">/* brand */</span>
+  <span class="prop">--blue-600</span>: <span class="value">#2563eb</span>;
+  <span class="prop">--blue-700</span>: <span class="value">#1d4ed8</span>;
+  <span class="prop">--blue-800</span>: <span class="value">#1e40af</span>;
+  <span class="prop">--blue-900</span>: <span class="value">#1e3a8a</span>;
+}</pre>
+      </div>
+      <p style="font-size: 0.9rem; margin-top: 1rem; text-align: center;">Also exports Tailwind config, Figma variables, and SCSS maps.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">♿</div>
+          <h3>WCAG Compliant</h3>
+          <p>Every shade includes contrast ratios. Know exactly which combinations pass AA and AAA.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🌙</div>
+          <h3>Dark Mode Variants</h3>
+          <p>Automatically generates inverted scales and semantic tokens for dark themes.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📦</div>
+          <h3>Multiple Formats</h3>
+          <p>CSS variables, Tailwind config, SCSS, Figma variables — pick what you need.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <h3>Semantic Tokens</h3>
+          <p>Optionally generates tokens like --color-primary, --color-text, --color-surface.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="demo">
+        <div class="demo-header">
+          <div class="demo-dots">
+            <span class="demo-dot red"></span>
+            <span class="demo-dot yellow"></span>
+            <span class="demo-dot green"></span>
+          </div>
+          <span class="demo-title">Terminal</span>
+        </div>
+        <div class="demo-content">
+          <pre style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">
+<span style="color: #6b7280;"># Generate a full color system</span>
+<span style="color: #22c55e;">$</span> claude "create palette from #3b82f6"
+
+<span style="color: var(--text);">✓ Generated 10-shade scale</span>
+<span style="color: var(--text);">✓ Calculated contrast ratios</span>
+<span style="color: var(--text);">✓ Created dark mode variants</span>
+
+<span style="color: #3b82f6;">📁 Output saved to colors/</span>
+  <span style="color: var(--text-muted);">├── variables.css</span>
+  <span style="color: var(--text-muted);">├── tailwind.config.js</span>
+  <span style="color: var(--text-muted);">└── contrast-report.md</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="faq-item">
+        <h3>How does it generate the shades?</h3>
+        <p>Uses perceptually uniform color spaces (OKLCH) for smooth, visually consistent scales — not just HSL interpolation.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I generate multiple colors at once?</h3>
+        <p>Yes. Give it your primary, secondary, and accent colors and it builds a complete system.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it work with any color?</h3>
+        <p>Any hex, RGB, or HSL color. It figures out the best scale automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta" id="get-started">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Get Early Access</h2>
+        <p>Join the waitlist for Color Palette Generator. Perfect for designers and devs who care about accessibility.</p>
+        
+        <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="email" name="email" placeholder="you@example.com" required>
+          <button type="submit" class="btn btn-primary">Join Waitlist</button>
+        </form>
+        
+        <p style="font-size: 0.85rem; margin-top: 1rem;">No spam. Just a one-time launch notification.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by <a href="https://scottkbell.com">Scott Bell</a> • <a href="/">More Skills</a></p>
+    </div>
+  </footer>
+</body>
+</html>
